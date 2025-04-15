@@ -1,0 +1,50 @@
+[
+{
+  "directory": "C:/labfinal/build",
+  "command": "E:\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\\mingw64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c C:\\labfinal\\src\\main.cpp",
+  "file": "C:/labfinal/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/labfinal/build",
+  "command": "E:\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\\mingw64\\bin\\g++.exe  @CMakeFiles/main.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\main.dir\\src\\try.cpp.obj -c C:\\labfinal\\src\\try.cpp",
+  "file": "C:/labfinal/src/try.cpp",
+  "output": "CMakeFiles/main.dir/src/try.cpp.obj"
+},
+{
+  "directory": "C:/labfinal/build",
+  "command": "E:\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\\mingw64\\bin\\g++.exe  @CMakeFiles/runTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\runTests.dir\\tests\\test_sample.cpp.obj -c C:\\labfinal\\tests\\test_sample.cpp",
+  "file": "C:/labfinal/tests/test_sample.cpp",
+  "output": "CMakeFiles/runTests.dir/tests/test_sample.cpp.obj"
+},
+{
+  "directory": "C:/labfinal/build",
+  "command": "E:\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\\mingw64\\bin\\g++.exe  @CMakeFiles/runTests.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\runTests.dir\\src\\try.cpp.obj -c C:\\labfinal\\src\\try.cpp",
+  "file": "C:/labfinal/src/try.cpp",
+  "output": "CMakeFiles/runTests.dir/src/try.cpp.obj"
+},
+{
+  "directory": "C:/labfinal/build/googletest/googlemock",
+  "command": "E:\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock.dir\\src\\gmock-all.cc.obj -c C:\\labfinal\\googletest\\googlemock\\src\\gmock-all.cc",
+  "file": "C:/labfinal/googletest/googlemock/src/gmock-all.cc",
+  "output": "googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj"
+},
+{
+  "directory": "C:/labfinal/build/googletest/googlemock",
+  "command": "E:\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\\mingw64\\bin\\g++.exe  @CMakeFiles/gmock_main.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gmock_main.dir\\src\\gmock_main.cc.obj -c C:\\labfinal\\googletest\\googlemock\\src\\gmock_main.cc",
+  "file": "C:/labfinal/googletest/googlemock/src/gmock_main.cc",
+  "output": "googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj"
+},
+{
+  "directory": "C:/labfinal/build/googletest/googletest",
+  "command": "E:\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest.dir\\src\\gtest-all.cc.obj -c C:\\labfinal\\googletest\\googletest\\src\\gtest-all.cc",
+  "file": "C:/labfinal/googletest/googletest/src/gtest-all.cc",
+  "output": "googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj"
+},
+{
+  "directory": "C:/labfinal/build/googletest/googletest",
+  "command": "E:\\Downloads\\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\\mingw64\\bin\\g++.exe  @CMakeFiles/gtest_main.dir/includes_CXX.rsp -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles\\gtest_main.dir\\src\\gtest_main.cc.obj -c C:\\labfinal\\googletest\\googletest\\src\\gtest_main.cc",
+  "file": "C:/labfinal/googletest/googletest/src/gtest_main.cc",
+  "output": "googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj"
+}
+]

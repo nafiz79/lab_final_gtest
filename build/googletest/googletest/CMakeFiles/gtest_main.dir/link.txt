@@ -1,0 +1,2 @@
+E:\Downloads\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\mingw64\bin\ar.exe qc ..\..\lib\libgtest_main.a CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj
+E:\Downloads\winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3\mingw64\bin\ranlib.exe ..\..\lib\libgtest_main.a

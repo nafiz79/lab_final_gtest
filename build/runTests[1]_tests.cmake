@@ -1,0 +1,5 @@
+add_test([=[SingletonTest.GetInstanceReturnsSamePointer]=]  C:/labfinal/build/runTests.exe [==[--gtest_filter=SingletonTest.GetInstanceReturnsSamePointer]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SingletonTest.GetInstanceReturnsSamePointer]=]  PROPERTIES WORKING_DIRECTORY C:/labfinal/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+add_test([=[SingletonTest.MessageIsCorrect]=]  C:/labfinal/build/runTests.exe [==[--gtest_filter=SingletonTest.MessageIsCorrect]==] --gtest_also_run_disabled_tests)
+set_tests_properties([=[SingletonTest.MessageIsCorrect]=]  PROPERTIES WORKING_DIRECTORY C:/labfinal/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
+set(  runTests_TESTS SingletonTest.GetInstanceReturnsSamePointer SingletonTest.MessageIsCorrect)
