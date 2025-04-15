@@ -3,13 +3,22 @@
 
 using namespace std;
 
-TEST(SingletonTest, GetInstanceReturnsSamePointer) {
-    Singleton* s1 = Singleton::GetInstance();
-    Singleton* s2 = Singleton::GetInstance();
-    EXPECT_EQ(s1, s2);
+TEST(ShapeFactoryTest, CircleArea) {
+    auto shape = ShapeFactory::createShape("circle", 2);
+    EXPECT_NEAR(shape->area(), 3.1416* 4, 0.0001);
 }
 
-TEST(SingletonTest, MessageIsCorrect) {
-    Singleton* s = Singleton::GetInstance();
-    EXPECT_EQ(s->GetMessage(), "Hello from Singleton!");
+TEST(ShapeFactoryTest, SquareArea) {
+    auto shape = ShapeFactory::createShape("square", 3);
+    EXPECT_DOUBLE_EQ(shape->area(), 9.0);
+}
+
+TEST(ShapeFactoryTest, RectangleArea) {
+    auto shape = ShapeFactory::createShape("rectangle", 3, 5);
+    EXPECT_DOUBLE_EQ(shape->area(), 15.0);
+}
+
+TEST(ShapeFactoryTest, InvalidShapeReturnsNullptr) {
+    auto shape = ShapeFactory::createShape("triangle", 3, 5);
+    EXPECT_EQ(shape, nullptr);
 }

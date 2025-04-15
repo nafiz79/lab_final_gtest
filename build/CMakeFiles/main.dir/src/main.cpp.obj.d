@@ -144,14 +144,22 @@ CMakeFiles/main.dir/src/main.cpp.obj: C:\labfinal\src\main.cpp \
  E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/istream \
  E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/istream.tcc \
  C:/labfinal/include/head.h \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/mutex \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/chrono.h \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/ratio \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/cstdint \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/memory \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/stl_tempbuf.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/stl_raw_storage_iter.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/align.h \
  E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/lib/gcc/x86_64-w64-mingw32/14.2.0/include/stdint.h \
  E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/x86_64-w64-mingw32/include/stdint.h \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/limits \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/ctime \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/std_mutex.h \
- E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/unique_lock.h
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/unique_ptr.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/shared_ptr.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/shared_ptr_base.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/allocated_ptr.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/ext/aligned_buffer.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/ext/concurrence.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/shared_ptr_atomic.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/atomic_base.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/bits/atomic_lockfree_defines.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/backward/auto_ptr.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/pstl/glue_memory_defs.h \
+ E:/Downloads/winlibs-x86_64-posix-seh-gcc-14.2.0-mingw-w64msvcrt-12.0.0-r3/mingw64/include/c++/14.2.0/pstl/execution_defs.h

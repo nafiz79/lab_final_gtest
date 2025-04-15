@@ -4,11 +4,13 @@
 using namespace std;
 
 int main() {
-    Singleton* s1 = Singleton::GetInstance();
-    Singleton* s2 = Singleton::GetInstance();
+    auto circle = ShapeFactory::createShape("circle", 5);
+    auto square = ShapeFactory::createShape("square", 4);
+    auto rectangle = ShapeFactory::createShape("rectangle", 4, 6);
 
-    cout << s1->GetMessage() << endl;
-    cout << "Both instances are same: " << boolalpha << (s1 == s2) << endl;
+    cout << "Circle area: " << circle->area() << endl;
+    cout << "Square area: " << square->area() << endl;
+    cout << "Rectangle area: " << rectangle->area() << endl;
 
     return 0;
 }

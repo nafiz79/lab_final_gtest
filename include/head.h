@@ -1,22 +1,38 @@
 #pragma once
+#include <memory>
 #include <string>
-#include <mutex>
 
 using namespace std;
 
-class Singleton {
-private:
-    static Singleton* instance;
-    static mutex mtx;
-
-    // Private constructor
-    Singleton();
-
+class Shape {
 public:
-    Singleton(const Singleton&) = delete;
-    Singleton& operator=(const Singleton&) = delete;
-
-    static Singleton* GetInstance();
-
-    string GetMessage() const;
+    virtual double area() const = 0;
+    virtual ~Shape() = default;
 };
+
+class Circle : public Shape {
+    double radius;
+public:
+    Circle(double r);
+    double area() const override;
+};
+
+class Square : public Shape {
+    double side;
+public:
+    Square(double s);
+    double area() const override;
+};
+
+class Rectangle : public Shape {
+    double width, height;
+public:
+    Rectangle(double w, double h);
+    double area() const override;
+};
+
+class ShapeFactory {
+public:
+    static unique_ptr<Shape> createShape(const string& type, double a, double b = 0.0);
+};
+
