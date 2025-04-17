@@ -1,16 +1,22 @@
 #include <iostream>
 #include "head.h"
 
-using namespace std;
+using namespace factory;
+
+void clientCode(const Creator& creator) {
+    auto product = creator.factoryMethod();
+    std::cout << product->operation() << std::endl;
+}
 
 int main() {
-    auto circle = ShapeFactory::createShape("circle", 5);
-    auto square = ShapeFactory::createShape("square", 4);
-    auto rectangle = ShapeFactory::createShape("rectangle", 4, 6);
+    ConcreteCreatorA creatorA;
+    ConcreteCreatorB creatorB;
 
-    cout << "Circle area: " << circle->area() << endl;
-    cout << "Square area: " << square->area() << endl;
-    cout << "Rectangle area: " << rectangle->area() << endl;
+    std::cout << "Using CreatorA:\n";
+    clientCode(creatorA);
+
+    std::cout << "Using CreatorB:\n";
+    clientCode(creatorB);
 
     return 0;
 }

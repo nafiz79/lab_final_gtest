@@ -1,38 +1,48 @@
-#pragma once
-#include <memory>
+#ifndef HEAD_H
+#define HEAD_H
+
 #include <string>
+#include <memory>
 
-using namespace std;
+namespace factory {
 
-class Shape {
+// Product interface
+class Product {
 public:
-    virtual double area() const = 0;
-    virtual ~Shape() = default;
+    virtual std::string operation() const = 0;
+    virtual ~Product() = default;
 };
 
-class Circle : public Shape {
-    double radius;
+// Concrete Products
+class ConcreteProductA : public Product {
 public:
-    Circle(double r);
-    double area() const override;
+    std::string operation() const override;
 };
 
-class Square : public Shape {
-    double side;
+class ConcreteProductB : public Product {
 public:
-    Square(double s);
-    double area() const override;
+    std::string operation() const override;
 };
 
-class Rectangle : public Shape {
-    double width, height;
+// Factory interface
+class Creator {
 public:
-    Rectangle(double w, double h);
-    double area() const override;
+    virtual std::unique_ptr<Product> factoryMethod() const = 0;
+    virtual ~Creator() = default;
 };
 
-class ShapeFactory {
+// Concrete Creators
+class ConcreteCreatorA : public Creator {
 public:
-    static unique_ptr<Shape> createShape(const string& type, double a, double b = 0.0);
+    std::unique_ptr<Product> factoryMethod() const override;
 };
+
+class ConcreteCreatorB : public Creator {
+public:
+    std::unique_ptr<Product> factoryMethod() const override;
+};
+
+} // namespace factory
+
+#endif // HEAD_H
 

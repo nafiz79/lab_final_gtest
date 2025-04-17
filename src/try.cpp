@@ -1,37 +1,23 @@
 #include "head.h"
-#include <cmath>
 
-using namespace std;
+namespace factory {
 
-
-Circle::Circle(double r) : radius(r) {}
-double Circle::area() const {
-    return M_PI * radius * radius;
+// Implementations of ConcreteProductA and ConcreteProductB
+std::string ConcreteProductA::operation() const {
+    return "Result from ConcreteProductA";
 }
 
-
-Square::Square(double s) : side(s) {}
-double Square::area() const {
-    return side * side;
+std::string ConcreteProductB::operation() const {
+    return "Result from ConcreteProductB";
 }
 
-
-Rectangle::Rectangle(double w, double h) : width(w), height(h) {}
-double Rectangle::area() const {
-    return width * height;
+// Implementations of ConcreteCreatorA and ConcreteCreatorB
+std::unique_ptr<Product> ConcreteCreatorA::factoryMethod() const {
+    return std::make_unique<ConcreteProductA>();
 }
 
-
-unique_ptr<Shape> ShapeFactory::createShape(const string& type, double a, double b) {
-    if (type == "circle") {
-        return make_unique<Circle>(a);
-    } else if (type == "square") {
-        return make_unique<Square>(a);
-    } else if (type == "rectangle") {
-        return make_unique<Rectangle>(a, b);
-    }
-    return nullptr;
-
-    
+std::unique_ptr<Product> ConcreteCreatorB::factoryMethod() const {
+    return std::make_unique<ConcreteProductB>();
 }
 
+} // namespace factory
