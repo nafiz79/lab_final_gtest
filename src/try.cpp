@@ -1,23 +1,37 @@
 #include "head.h"
 
-namespace factory {
-
-// Implementations of ConcreteProductA and ConcreteProductB
-std::string ConcreteProductA::operation() const {
-    return "Result from ConcreteProductA";
+// Windows implementations
+void WindowsWindow::render() {
+    cout << "Rendering Windows Window" << endl;
 }
 
-std::string ConcreteProductB::operation() const {
-    return "Result from ConcreteProductB";
+void WindowsScrollbar::render() {
+    cout << "Rendering Windows Scrollbar" << endl;
 }
 
-// Implementations of ConcreteCreatorA and ConcreteCreatorB
-std::unique_ptr<Product> ConcreteCreatorA::factoryMethod() const {
-    return std::make_unique<ConcreteProductA>();
+// Linux implementations
+void LinuxWindow::render() {
+    cout << "Rendering Linux Window" << endl;
 }
 
-std::unique_ptr<Product> ConcreteCreatorB::factoryMethod() const {
-    return std::make_unique<ConcreteProductB>();
+void LinuxScrollbar::render() {
+    cout << "Rendering Linux Scrollbar" << endl;
+    
 }
 
-} // namespace factory
+// Factory implementations
+Window* WindowsFactory::createWindow() {
+    return new WindowsWindow();
+}
+
+Scrollbar* WindowsFactory::createScrollbar() {
+    return new WindowsScrollbar();
+}
+
+Window* LinuxFactory::createWindow() {
+    return new LinuxWindow();
+}
+
+Scrollbar* LinuxFactory::createScrollbar() {
+    return new LinuxScrollbar();
+}

@@ -1,16 +1,41 @@
-#include <gtest/gtest.h>
 #include "head.h"
+#include <gtest/gtest.h>
+#include <sstream>
+#include <functional>
 
-using namespace factory;
+using namespace std;
 
-TEST(FactoryTest, ConcreteProductAOperation) {
-    ConcreteCreatorA creator;
-    auto product = creator.factoryMethod();
-    EXPECT_EQ(product->operation(), "Result from ConcreteProductA");
+// Updated to accept std::function
+string captureOutput(function<void()> func) {
+    stringstream buffer;
+    streambuf* old = cout.rdbuf(buffer.rdbuf());
+    func();
+    cout.rdbuf(old);
+    return buffer.str();
 }
 
-TEST(FactoryTest, ConcreteProductBOperation) {
-    ConcreteCreatorB creator;
-    auto product = creator.factoryMethod();
-    EXPECT_EQ(product->operation(), "Result from ConcreteProductB");
+// Test Windows GUI
+TEST(GUITest, WindowsFactoryOutput) {
+    WindowsFactory factory;
+    Window* win = factory.createWindow();
+    Scrollbar* bar = factory.createScrollbar();
+
+    EXPECT_EQ(captureOutput([&]() { win->render(); }), "Rendering Windows Window\n");
+    EXPECT_EQ(captureOutput([&]() { bar->render(); }), "Rendering Windows Scrollbar\n");
+
+    delete win;
+    delete bar;
+}
+
+// Test Linux GUI
+TEST(GUITest, LinuxFactoryOutput) {
+    LinuxFactory factory;
+    Window* win = factory.createWindow();
+    Scrollbar* bar = factory.createScrollbar();
+
+    EXPECT_EQ(captureOutput([&]() { win->render(); }), "Rendering Linux Window\n");
+    EXPECT_EQ(captureOutput([&]() { bar->render(); }), "Rendering Linux Scrollbar\n");
+
+    delete win;
+    delete bar;
 }

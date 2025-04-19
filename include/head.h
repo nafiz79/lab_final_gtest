@@ -1,48 +1,63 @@
 #ifndef HEAD_H
 #define HEAD_H
 
-#include <string>
-#include <memory>
+#include <iostream>
+using namespace std;
 
-namespace factory {
-
-// Product interface
-class Product {
+// Interfaces
+class Window {
 public:
-    virtual std::string operation() const = 0;
-    virtual ~Product() = default;
+    virtual void render() = 0;
+    virtual ~Window() {}
 };
 
-// Concrete Products
-class ConcreteProductA : public Product {
+class Scrollbar {
 public:
-    std::string operation() const override;
+    virtual void render() = 0;
+    virtual ~Scrollbar() {}
 };
 
-class ConcreteProductB : public Product {
+// Concrete Windows implementations
+class WindowsWindow : public Window {
 public:
-    std::string operation() const override;
+    void render() override;
 };
 
-// Factory interface
-class Creator {
+class WindowsScrollbar : public Scrollbar {
 public:
-    virtual std::unique_ptr<Product> factoryMethod() const = 0;
-    virtual ~Creator() = default;
+    void render() override;
 };
 
-// Concrete Creators
-class ConcreteCreatorA : public Creator {
+// Concrete Linux implementations
+class LinuxWindow : public Window {
 public:
-    std::unique_ptr<Product> factoryMethod() const override;
+    void render() override;
 };
 
-class ConcreteCreatorB : public Creator {
+class LinuxScrollbar : public Scrollbar {
 public:
-    std::unique_ptr<Product> factoryMethod() const override;
+    void render() override;
 };
 
-} // namespace factory
+// Abstract Factory
+class GUIFactory {
+public:
+    virtual Window* createWindow() = 0;
+    virtual Scrollbar* createScrollbar() = 0;
+    virtual ~GUIFactory() {}
+};
 
-#endif // HEAD_H
+// Concrete Factories
+class WindowsFactory : public GUIFactory {
+public:
+    Window* createWindow() override;
+    Scrollbar* createScrollbar() override;
+};
 
+class LinuxFactory : public GUIFactory {
+public:
+    Window* createWindow() override;
+    Scrollbar* createScrollbar() override;
+};
+
+#endif

@@ -1,22 +1,20 @@
-#include <iostream>
 #include "head.h"
 
-using namespace factory;
-
-void clientCode(const Creator& creator) {
-    auto product = creator.factoryMethod();
-    std::cout << product->operation() << std::endl;
-}
-
 int main() {
-    ConcreteCreatorA creatorA;
-    ConcreteCreatorB creatorB;
+    GUIFactory* factory;
 
-    std::cout << "Using CreatorA:\n";
-    clientCode(creatorA);
+    // You can switch factory here to WindowsFactory or LinuxFactory
+    factory = new WindowsFactory();
 
-    std::cout << "Using CreatorB:\n";
-    clientCode(creatorB);
+    Window* win = factory->createWindow();
+    Scrollbar* bar = factory->createScrollbar();
+
+    win->render();
+    bar->render();
+
+    delete win;
+    delete bar;
+    delete factory;
 
     return 0;
 }
