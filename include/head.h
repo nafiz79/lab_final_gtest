@@ -45,6 +45,8 @@ public:
     virtual Window* createWindow() = 0;
     virtual Scrollbar* createScrollbar() = 0;
     virtual ~GUIFactory() {}
+    //This is a test mehtod, Do not approach
+    //Updated head.h
 };
 
 // Concrete Factories
