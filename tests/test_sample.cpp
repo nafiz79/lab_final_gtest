@@ -39,3 +39,5 @@ TEST(GUITest, LinuxFactoryOutput) {
     delete win;
     delete bar;
 }
+//This is test method ,do not approach
+//updated test_sample.cpp
